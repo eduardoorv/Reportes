@@ -1,0 +1,270 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Reporte de Actividades
+\end_layout
+
+\begin_layout Subsection*
+Instalar Ubuntu
+\end_layout
+
+\begin_layout Standard
+Se utilizó el programa 
+\emph on
+Startup Disk Creator
+\emph default
+ con el que puedes crear un Startup Disk en una memoria USB para la instalación
+ del sistema operativo Ubuntu, el cual se descargó previamente de la pagina
+ de internet.
+ Depués se inicio la computadora desde la USB y se siguieron los pasos de
+ instalación.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/eduardo/Pictures/Screenshot from 2016-02-25 12:22:05.png
+	lyxscale 10
+	scale 10
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/eduardo/Pictures/Screenshot from 2016-02-25 12:23:26.png
+	lyxscale 10
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Intalar R y Rstudio
+\end_layout
+
+\begin_layout Standard
+Se descargaron los archivos binarios de la pagina de R, se llevó a cabo
+ la instalación desde la tarminal, a su vez se tuvieron que instalar algunos
+ complementos necesarios para el buen funcionamiento de R.
+ Este modo de instalar, aunque más complicado, tiene la ventaja de que te
+ brinda la versión más reciente de R.
+\begin_inset Newline newline
+\end_inset
+
+Una herrmaienta (GUI) para facilitar el uso de R es Rstudio, el cual se
+ descargó desde terminal.
+\end_layout
+
+\begin_layout Subsection*
+Instalar Git y aprender a utilizarlo
+\end_layout
+
+\begin_layout Standard
+Sé instaló mediante apt-get en terminal, a traves de videos y tutoriales
+ aprendimos las funciones básicas de git y los conceptos generales.
+ También se abrió una cuenta en GitHub donde se subirán todos los programas
+ realizados.
+\end_layout
+
+\begin_layout Subsection*
+Aprender a usar shiny
+\end_layout
+
+\begin_layout Standard
+Mediante el tutorial de shiny (http://shiny.rstudio.com/tutorial/video/) se
+ conocieron los aspectos generales de este paquete de R, el cual facilita
+ la implementación de herramientas de estadística, graficación, etc.
+ en paginas web.
+ Así mismo se hizo un programa utilizando el paquete shiny para mostrar
+ el histograma de una muestra aleatoria normal (el tamaño de la muestra
+ la define el usuario).
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/eduardo/Pictures/Screenshot from 2016-02-26 11:53:06.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Aprender a usar leaflet
+\end_layout
+
+\begin_layout Standard
+Me diante el tutorial en la pagina de internet: rstudio.github.io/leaflet/shiny.htm
+l, nos familiarizamos con las funciones básicas del paquete de R, el cual
+ sirva para graficar mapas extraidos de la base de OpenStreetMaps (https://www.op
+enstreetmap.org/#map=1/6/57).
+ También se elavoró un programa que marca distintas ciudades en el mapa.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/eduardo/Pictures/Screenshot from 2016-02-26 11:59:22.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Investigar acerca de los shapefiles
+\end_layout
+
+\begin_layout Standard
+Se investigó en que consisten los shapefiles, así como para que se utilizan
+ y en que paginas de internet (en México) existen shapefiles disponibles.
+ Este tipo de archivos nos brindan datos con coordenadas geograficas.
+ Más aún, contienen objetos como poligonos, puntos, lineas representando
+ objetos de interés en un mapa.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/eduardo/Pictures/Screenshot from 2016-02-26 12:03:52.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Hacer un programa que use shapefiles
+\end_layout
+
+\begin_layout Standard
+Se descargó el shapefile de la división política de México de la pagina
+ de internet: http://www.conabio.gob.mx/informacion/gis/.
+ Para manejar este archivo se utilizó la librería de R rdgal, con la cual
+ se guardo como un poligono (un objeto de sp) con la función: 
+\end_layout
+
+\begin_layout LyX-Code
+readOGR()
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/eduardo/Pictures/Screenshot from 2016-02-26 13:54:13.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout Subsection*
+Cargar archivos desde una shinyapp
+\end_layout
+
+\begin_layout Standard
+Se hizo un programa que permite elegir el archivo en formato .csv que desee
+ el usuario para graficar los datos y imprimir un resumen estadistico de
+ los mismos.
+ Para poder cargar archivos desde una app hecha en shiny se utilizó el comando
+ 
+\end_layout
+
+\begin_layout LyX-Code
+fileInput()
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Graphics
+	filename /home/eduardo/Pictures/Screenshot from 2016-02-26 13:57:06.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\end_body
+\end_document
